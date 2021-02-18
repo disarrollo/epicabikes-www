@@ -7,7 +7,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    //titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: '%s',
     title: process.env.TITLE || '',
     meta: [
       { charset: 'utf-8' },

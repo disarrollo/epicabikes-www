@@ -56,7 +56,7 @@ export default {
       
     }),
     ...mapGetters({
-      isMobile: 'isMobile',
+      
     }),
 
     bannerRatio(){

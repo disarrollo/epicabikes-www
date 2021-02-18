@@ -4,6 +4,7 @@ export default function ({ $axios, redirect, store }) {
     if (window.localStorage.getItem('USRTKN')) {
       request.headers.common['Authorization'] = 'Bearer '+window.localStorage.getItem('USRTKN')
     }
+    request.headers.common['BUSINESS_KEY'] = 'EPICA'
   })
 
   $axios.onResponse(response => {
@@ -46,7 +47,7 @@ export default function ({ $axios, redirect, store }) {
             
             console.log(error.response.data.error.message.internal_code)
             //Si el error es de token invalido borrarmos el token de usuario actual
-            /*
+            
             store.dispatch('auth/resetUser')
             store.dispatch('auth/initIdentity')
             if(error.response.data.error.message.info){
@@ -55,7 +56,7 @@ export default function ({ $axios, redirect, store }) {
               store.commit('setError','Sorry, try again')
             }
             redirect('/sorry')
-            */
+            
 
           }else if(error.response.data.error.message.internal_code == 'MAX_LOGIN_TRIES'){
             //MAXIMA CANTIDAD DE INTENTOS

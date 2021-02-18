@@ -149,13 +149,11 @@
     </v-snackbar>
 
     <v-footer>
-      <span>epicabikes.com &copy; 2020</span>
+      <span class="text-caption">&copy; 2020 Epica Bikes</span>
     </v-footer>
-
     
     <LoginFormDialog/>
     
-
     <div v-if="debugEnabled">
       <DebugBar></DebugBar>
     </div>
